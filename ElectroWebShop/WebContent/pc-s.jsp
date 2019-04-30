@@ -50,9 +50,11 @@
 		<div class="w3-row" style="margin-bottom: 50px">
 			<c:forEach items="${allPCs}" var="pc">
 				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-				   	<c:out value="${pc.productName}" />
+				   	<img src="data:image/jpg;base64,${pc.base64image}" height="100" />
+				   	<br/>
+				   	<b><c:out value="${pc.productName}" /></b>
 					<br/>
-					<c:out value="${pc.productPrice}" />
+					$<c:out value="${pc.productPrice}" />
 					<br/>
 					<c:out value="${pc.productDetails}" />
 					<br/>

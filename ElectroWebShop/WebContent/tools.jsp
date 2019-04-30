@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -49,16 +50,33 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 
 		<!-- Product Grid -->
 		<div class="w3-row">
-			<div class="w3-container w3-button"
-				style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-				<img alt="" src="" style="width: 100%; height: auto">
-				<p></p>
-			</div>
-
-
-		</div>
+			<c:forEach items="${allTools}" var="tools">
+				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
+				   	<img src="data:image/jpg;base64,${tools.base64image}" height="100" />
+				   	<br/>
+				   	<b><c:out value="${tools.productName}" /></b>
+					<br/>
+					$<c:out value="${tools.productPrice}" />
+					<br/>
+					<c:out value="${tools.productDetails}" />
+					<br/>
+				</div>
+				</c:forEach>				
+		</div>	
+		
+		<div class="w3-row" style="margin-bottom: 50px">
+			<c:forEach items="${allImages}" var="image">
+				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
+				   	<c:out value="${image.productName}" />
+					<br/>
+					<c:out value="${image.image}" />
+					<br/>
+					<c:out value="${image.imageFileName}" />
+					<br/>
+				</div>
+				</c:forEach>			
 	</div>
-
+</div>
 	<jsp:include page="footer.jsp" flush="true" />
 </body>
 </html>

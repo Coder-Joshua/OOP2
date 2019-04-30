@@ -1,30 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ page import="javax.servlet.*" %>
+<%@ page import="javax.servlet.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Header</title>
-		<meta charset="ISO-8859-1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<title>Header</title>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <style>
-	.w3-sidebar a 
-	{
-		font-family: "Roboto", sans-serif
-	}
+.w3-sidebar a {
+	font-family: "Roboto", sans-serif
+}
 
-	body, h1, h2, h3, h4, h5, h6, .w3-wide 
-	{
-		font-family: "Montserrat", sans-serif;
-	}	
-	input[type=text] {
+body, h1, h2, h3, h4, h5, h6, .w3-wide {
+	font-family: "Montserrat", sans-serif;
+}
+
+input[type=text] {
 	width: 130px;
 	-webkit-transition: width 0.4s ease-in-out;
 	transition: width 0.4s ease-in-out;
@@ -71,18 +74,19 @@ input[type=text]:focus {
 
 <body class="w3-content" style="max-width: 100%">
 	<div class="w3-main" style="margin-left: 250px">
-		
+
 		<!-- Top menu on small screens -->
 		<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
 			<div class="w3-bar-item w3-padding-24 w3-wide">Electro-World</div>
-			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()">
-				<i class="fa fa-bars"></i>
-			</a> 
-			<a href="profile.jsp" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="profile()">
-				<i class="material-icons">person</i>
-			</a>
-			<a href="home.jsp" class="w3-bar-item w3-button w3-padding-24 w3-right">
-				<i class="material-icons">home</i>
+			<a href="javascript:void(0)"
+				class="w3-bar-item w3-button w3-padding-24 w3-right"
+				onclick="w3_open()"> <i class="fa fa-bars"></i>
+			</a> <a href="profile.jsp"
+				class="w3-bar-item w3-button w3-padding-24 w3-right"
+				onclick="profile()"> <i class="material-icons">person</i>
+			</a> <a href="home.jsp"
+				class="w3-bar-item w3-button w3-padding-24 w3-right"> <i
+				class="material-icons">home</i>
 			</a>
 		</header>
 
@@ -90,7 +94,8 @@ input[type=text]:focus {
 		<div class="w3-hide-large" style="margin-top: 83px; width: 100%"></div>
 
 		<!-- Top header -->
-		<<header class="w3-container w3-xlarge">
+		<
+		<header class="w3-container w3-xlarge">
 			<p class="w3-left w3-text-blue">
 				<b>For all your Electronic needs</b>
 			</p>
@@ -100,7 +105,8 @@ input[type=text]:focus {
 					<a class="material-icons w3-margin-right w3-button ">person</a>
 				</p>
 				<div class="dropdown-content" style="margin-top: 60px; width: 100%">
-					<a class=" w3-margin-right w3-tooltip" href="/ElectroWebShop/Profile">Profile<span
+					<a class=" w3-margin-right w3-tooltip"
+						href="/ElectroWebShop/Profile">Profile<span
 						class="w3-text w3-small"><em>User:
 								${currentSessionUser}</em> </span></a> <a href="/ElectroWebShop/Logout">Logout</a>
 				</div>
@@ -118,34 +124,38 @@ input[type=text]:focus {
 				</div>
 			</div>
 			<form method="get" action="Search">
-				<p class="w3-left" style="margin-left: 20px" onclick="search()">
-					<i class="w3-medium"><input type="text" name="search"
-						placeholder="Search.."><input type="submit" name="search"
-						value="Search"></i>
+				<p class="w3-left" style="margin-left: 20px" >
+					<i class="w3-medium">
+						<input type="text" name="search" placeholder="Search..">
+						<input type="submit" value="Search">
+					</i>
 				</p>
 			</form>
+			
 			<p class="w3-right w3-hide-small">
 				<a href="home.jsp" class="material-icons w3-button">home</a>
 			</p>
 		</header>
 	</div>
 	<script>
-		function profile() 
-		{	
-				LoginBean user =new LoginBean();
-				
-				List<RegisterBean> profile = RegisterDao.view(currentSessionUser);
-				request.setAttribute("profile", profile);
-			
-				RequestDispatcher dispatcher = request.getRequestDispatcher("profile.jsp");
-				dispatcher.forward(request, response);		   		    
+		function profile() {
+			LoginBean
+			user = new LoginBean();
+
+			List<RegisterBean>
+			profile = RegisterDao.view(currentSessionUser);
+			request.setAttribute("profile", profile);
+
+			RequestDispatcher
+			dispatcher = request.getRequestDispatcher("profile.jsp");
+			dispatcher.forward(request, response);
 		}
-		
-		function logout() 
-		{
-			  HttpSession session = request.getSession(true);	    
-	          session.setAttribute("currentSessionUser",null); 
-	          response.sendRedirect("Start.jsp"); //start page  
+
+		function logout() {
+			HttpSession
+			session = request.getSession(true);
+			session.setAttribute("currentSessionUser", null);
+			response.sendRedirect("Start.jsp"); //start page  
 		}
 	</script>
 </body>

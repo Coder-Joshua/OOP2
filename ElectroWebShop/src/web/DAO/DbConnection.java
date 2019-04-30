@@ -12,7 +12,7 @@ public class DbConnection
 		try
 	    {
 			String url = "jdbc:mysql://localhost:3306/estore"; 
-	        Class.forName("com.mysql.jdbc.Driver");
+	        Class.forName("com.mysql.cj.jdbc.Driver");
 	            
 	            try
 	            {            	

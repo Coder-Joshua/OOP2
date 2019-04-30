@@ -35,22 +35,22 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 				<div class="w3-col s4">
 					<h4>Contact</h4>
 					<p>Questions? Go ahead.</p>
-					<form action="/action_page.jsp" target="_blank">
+					<form method="get" action="Contact">
 						<p>
 							<input class="w3-input w3-border" type="text" placeholder="Name"
-								name="Name" required>
+								name="Name" required style="width:100%">
 						</p>
 						<p>
 							<input class="w3-input w3-border" type="text" placeholder="Email"
-								name="Email" required>
+								name="Email" required style="width:100%">
 						</p>
 						<p>
 							<input class="w3-input w3-border" type="text"
-								placeholder="Subject" name="Subject" required>
+								placeholder="Subject" name="Subject" required style="width:100%">
 						</p>
 						<p>
 							<input class="w3-input w3-border" type="text"
-								placeholder="Message" name="Message" required>
+								placeholder="Message" name="Message" required style="width:100%">
 						</p>
 						<button type="submit" class="w3-button w3-block w3-black">Send</button>
 					</form>

@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+C:\Users\Joshu\OOP2\Prac\OOP2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2818572479.index
+\ElectroWebShop\src
 C:\Users\Joshu\OOP2\Prac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2818572479.index
 \ElectroWebShop\src

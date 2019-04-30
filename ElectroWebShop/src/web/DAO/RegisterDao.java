@@ -6,7 +6,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import web.entitites.ContactBean;
 import web.entitites.RegisterBean;
+import web.entitites.RepairBean;
+import web.entitites.SubscribeBean;
 
 public class RegisterDao {
 
@@ -31,8 +34,61 @@ public class RegisterDao {
 		return customer;
 	}
 
+	public static RepairBean add(RepairBean repairs) {
+		Statement stmt = null;
+
+		String repairsQuery = "insert into repairs (Name,Email,Address,RepairDescription) values('" + repairs.getName()
+				+ "', '" + repairs.getEmail() + "', '" + repairs.getAddress() + "', '" + repairs.getDescription()
+				+ "')";
+		try {
+			currentCon = DbConnection.getConnection();
+			stmt = currentCon.createStatement();
+			stmt.executeUpdate(repairsQuery);
+			currentCon.close();
+		} catch (Exception ex) {
+			System.out.println("Registery of repairs form failed: An Exception has occurred! " + ex);
+		}
+		System.out.println("Query addded succesfully");
+		return repairs;
+
+	}
+
+	public static SubscribeBean add(SubscribeBean subscribe) {
+		Statement stmt = null;
+
+		String subscribeQuery = "insert into subscriptions (email) values('" + subscribe.getEmail() + "')";
+		try {
+			currentCon = DbConnection.getConnection();
+			stmt = currentCon.createStatement();
+			stmt.executeUpdate(subscribeQuery);
+			currentCon.close();
+		} catch (Exception ex) {
+			System.out.println("Registery of repairs form failed: An Exception has occurred! " + ex);
+		}
+		System.out.println("Query added succesfully");
+		return subscribe;
+
+	}
+
+	public static ContactBean add(ContactBean contact) {
+		Statement stmt = null;
+
+		String contactQuery = "insert into contact (Name,Email,Subject,Message) values('" + contact.getName() + "','"
+				+ contact.getEmail() + "','" + contact.getSubject() + "','" + contact.getMessage() + "')";
+		try {
+			currentCon = DbConnection.getConnection();
+			stmt = currentCon.createStatement();
+			stmt.executeUpdate(contactQuery);
+			currentCon.close();
+		} catch (Exception ex) {
+			System.out.println("Registery of contact details failed: An Exception has occurred! " + ex);
+		}
+		System.out.println("Query added succesfully");
+		return contact;
+	}
+
 	public static List<RegisterBean> view(String userID) {
-		
+
 		List<RegisterBean> customer = new ArrayList<>();
 		Statement stmt = null;
 		String viewQuery = "select firstName,lastname,adress,email,gender from customer where userID='" + userID + "'";

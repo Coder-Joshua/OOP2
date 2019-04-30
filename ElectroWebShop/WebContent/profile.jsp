@@ -46,8 +46,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 		</div>
 
 		<c:forEach items="${profile}" var="p">
-			<div class="w3-container "
-				style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
+			
 				<table class="w3-centered w3-table w3-bordered w3-large">
 					<tr>
 						<td><b>First Name:</b></td>
@@ -55,7 +54,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 					</tr>
 					<tr>
 						<td><b>Last Name:</b></td>
-						<td><c:out value="${p.lastName}" /></td>
+						<td><c:out value="${p.lastname}" /></td>
 					</tr>
 					<tr>
 						<td><b>E-mail:</b></td>
@@ -67,10 +66,10 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 					</tr>
 					<tr>
 						<td><b>Address:</b></td>
-						<td><c:out value="${p.adress}" /></td>
+						<td><c:out value="${p.address}" /></td>
 					</tr>
 				</table>
-			</div>
+			
 		</c:forEach>
 
 	</div>

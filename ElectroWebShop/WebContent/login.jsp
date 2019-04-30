@@ -35,7 +35,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 			<table>
 				<tr>
 					<td><b>User Name</b></td>
-					<td><input type="text" name="uname"></td>
+					<td><input type="text" name="uname" style="width:100%"></td>
 				</tr>
 				<tr>
 					<td><b>Password</b></td>

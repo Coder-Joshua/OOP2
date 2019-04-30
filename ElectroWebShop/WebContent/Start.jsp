@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 
 <html>
-	<title>Homepage</title>
-		<meta charset="ISO-8859-1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<style>
-	.w3-sidebar a {
+<title>Homepage</title>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.w3-sidebar a {
 	font-family: "Roboto", sans-serif
-	}
+}
 
-	body, h1, h2, h3, h4, h5, h6, .w3-wide {
+body, h1, h2, h3, h4, h5, h6, .w3-wide {
 	font-family: "Montserrat", sans-serif;
-	}
-	</style>
+}
+</style>
 
-	<body class="w3-content" style="max-width: 1200px">
-		<jsp:include page="sidebar.jsp" flush="true" />
-		<jsp:include page="startHeader.jsp" flush="true" />
+<body class="w3-content" style="max-width: 1200px">
+	<jsp:include page="sidebar.jsp" flush="true" />
+	<jsp:include page="startHeader.jsp" flush="true" />
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left: 250px">
 
-	<h3 class="w3-center w3-text-indigo">Welcome to Electro-World!</h3>
+		<h3 class="w3-center w3-text-indigo">Welcome to Electro-World!</h3>
 
 		<!-- Push down content on small screens -->
 		<div class="w3-hide-large" style="margin-top: 83px"></div>
@@ -43,7 +46,7 @@
 					Electronics</h1>
 
 				<p>
-					<a href="" class="w3-button w3-black w3-padding-large w3-large">SHOP
+					<a href="/ElectroWebShop/ListAll" class="w3-button w3-black w3-padding-large w3-large">SHOP
 						NOW</a>
 				</p>
 			</div>
@@ -137,15 +140,17 @@
 			</div>
 		</div>
 		<!-- Subscribe section -->
-		<div class="w3-container w3-black w3-padding-32">
-			<h1>Subscribe</h1>
-			<p>To get special offers and VIP treatment:</p>
-			<p>
-				<input class="w3-input w3-border" type="text"
-					placeholder="Enter e-mail" style="width: 100%">
-			</p>
-			<button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
-		</div>
+		<form method="get" action="Subscribe">
+			<div class="w3-container w3-black w3-padding-32">
+				<h1>Subscribe</h1>
+				<p>To get special offers and VIP treatment:</p>
+				<p>
+					<input class="w3-input w3-border" type="text" name="email" required 
+						placeholder="Enter e-mail" style="width: 100%">
+				</p>
+				<input type="submit" value="Subscribe" class="w3-red w3-large w3-round">
+			</div>
+		</form>
 	</div>
 
 	<jsp:include page="footer.jsp" flush="true" />

@@ -54,21 +54,21 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 			<c:forEach items="${allPhones}" var="phone">
 				<div class="w3-container w3-button"
 					style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-					<img src="data:image/jpg;base64,${image.base64image}" height="100" />
+					<img src="data:image/jpg;base64,${phone.base64image}" height="100" />
 					<br />
-					<p>
-						<c:out value="${phone.productName}" />
+					
+						<b><c:out value="${phone.productName}" /></b>
 						<br />
-					</p>
+					
 
 					<P>
-						<c:out value="${phone.productPrice}" />
+						$<c:out value="${phone.productPrice}" />
 						<br />
 					</P>
 
 					<p>
 						<c:out value="${phone.productDetails}" />
-						<br />
+						
 					</p>
 
 
@@ -80,7 +80,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 						<c:param name="productId" value="${productId}" />
 					</c:url>
 
-					<a href="${url}"><strong>${acc.productName}</strong>Add to cart</a>
+					<a href="${url}">Add to cart</a>
 					<c:out value="${acc.productDetails}" />
 				</div>
 			</c:forEach>

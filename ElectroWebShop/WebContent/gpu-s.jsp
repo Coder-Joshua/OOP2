@@ -49,9 +49,11 @@
 		<div class="w3-row" style="margin-bottom: 50px">
 			<c:forEach items="${allGPUs}" var="gpu">
 				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-				   	<c:out value="${gpu.productName}" />
+				   	<img src="data:image/jpg;base64,${gpu.base64image}" height="100" />
+				   	<br/>
+				   	<b><c:out value="${gpu.productName}" /></b>
 					<br/>
-					<c:out value="${gpu.productPrice}" />
+					$<c:out value="${gpu.productPrice}" />
 					<br/>
 					<c:out value="${gpu.productDetails}" />
 					<br/>

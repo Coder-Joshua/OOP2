@@ -47,11 +47,13 @@
 
 		<!-- Product Grid -->
 		<div class="w3-row" style="margin-bottom: 50px">
-			<c:forEach items="${allICchips}" var="ic">
+			<c:forEach items="${allICs}" var="ic">
 				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-				   	<c:out value="${ic.productName}" />
+				   	<img src="data:image/jpg;base64,${ic.base64image}" height="100" />
+				   	<br/>
+				   	<b><c:out value="${ic.productName}" /></b>
 					<br/>
-					<c:out value="${ic.productPrice}" />
+					$<c:out value="${ic.productPrice}" />
 					<br/>
 					<c:out value="${ic.productDetails}" />
 					<br/>

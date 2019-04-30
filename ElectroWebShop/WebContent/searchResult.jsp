@@ -23,7 +23,19 @@
 
 <body class="w3-content" style="max-width: 1200px">
 	<jsp:include page="sidebar.jsp" flush="true" />
+	<%--check to see if user has logged in --%>
+	<%
+		String user = (String) session.getAttribute("currentSessionUser");
+		if (user != null) {
+	%>
 	<jsp:include page="header.jsp" flush="true" />
+	<%
+		} else if (user == null) {
+	%>
+	<jsp:include page="startHeader.jsp" flush="true" />
+	<%
+		}
+	%>
 
 	<!-- Page Content -->
 	<div class="w3-main" style="margin-left: 250px">
@@ -37,14 +49,15 @@
 		<div class="w3-row" style="margin-bottom: 50px">
 			<c:forEach items="${search}" var="s">
 				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-				   	<c:out value="${s.productName}" />
+				   	<img src="data:image/jpg;base64,${s.base64image}" height="100"/>
 					<br/>
-					<c:out value="${s.productPrice}" />
+				   	<b><c:out value="${s.productName}" /></b>
+					<br/>
+					$<c:out value="${s.productPrice}" />
 					<br/>
 					<c:out value="${s.productDetails}" />
 					<br/>
-					<img src="data:image/jpg;base64,${s.base64image}" height="100"/>
-					<br/>
+					
 				</div>
 				
 				</c:forEach>				

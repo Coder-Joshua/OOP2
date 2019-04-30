@@ -25,7 +25,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 <body>
 	<body class="w3-content" style="max-width: 1200px">
 		<jsp:include page="sidebar.jsp" flush="true" />
-		<jsp:include page="header.jsp" flush="true" />
+		<jsp:include page="startHeader.jsp" flush="true" />
 		
 		<div class="w3-main" style="margin-left: 250px">
 		<form class="w3-main" style="margin-left: 250px; margin-top: 75px; margin-bottom: 75px" method="get" action="Login">
@@ -33,7 +33,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 			<table>
 				<tr>
 					<td><b>User Name</b></td>
-					<td><input type="text" name="uname"></td>
+					<td><input type="text" name="uname" style="width:100%"></td>
 				</tr>
 				<tr>
 					<td><b>Password</b></td>
@@ -45,7 +45,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 				</tr>
 			</table><br/><br/>
 			Don't have an account yet?
-			Please register first!
+			Please register <a href="register.jsp">here</a> first!
 		</form>
 		
 		</div>
