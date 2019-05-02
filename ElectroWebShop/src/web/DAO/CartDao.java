@@ -1,5 +1,6 @@
 package web.DAO;
 
+import web.entitites.ProductBean;
 import web.entitites.SetDetails;
 import web.entitites.ShoppingCartBean;
 
@@ -91,6 +92,11 @@ public class CartDao
 			amount += (item.getQuantity() * s.getSetPrice());
 		}
 		return amount;
+	}
+
+	public static ProductBean find(String parameter) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 

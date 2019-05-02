@@ -94,7 +94,7 @@ input[type=text]:focus {
 		<div class="w3-hide-large" style="margin-top: 83px; width: 100%"></div>
 
 		<!-- Top header -->
-		<
+		
 		<header class="w3-container w3-xlarge">
 			<p class="w3-left w3-text-blue">
 				<b>For all your Electronic needs</b>
@@ -104,11 +104,10 @@ input[type=text]:focus {
 				<p class="w3-right w3-hide-small">
 					<a class="material-icons w3-margin-right w3-button ">person</a>
 				</p>
-				<div class="dropdown-content" style="margin-top: 60px; width: 100%">
+				<div class="dropdown-content" style="margin-top: 60px">
 					<a class=" w3-margin-right w3-tooltip"
-						href="/ElectroWebShop/Profile">Profile<span
-						class="w3-text w3-small"><em>User:
-								${currentSessionUser}</em> </span></a> <a href="/ElectroWebShop/Logout">Logout</a>
+						href="/ElectroWebShop/Profile">Profile</a> <a
+						href="/ElectroWebShop/Logout">Logout</a>
 				</div>
 
 			</div>
@@ -124,14 +123,14 @@ input[type=text]:focus {
 				</div>
 			</div>
 			<form method="get" action="Search">
-				<p class="w3-left" style="margin-left: 20px" >
-					<i class="w3-medium">
-						<input type="text" name="search" placeholder="Search..">
-						<input type="submit" value="Search">
+				<p class="w3-left" style="margin-left: 20px">
+					<i class="w3-medium"> <input type="text" name="search"
+						placeholder="Search.."> <input type="submit"
+						value="Search">
 					</i>
 				</p>
 			</form>
-			
+
 			<p class="w3-right w3-hide-small">
 				<a href="home.jsp" class="material-icons w3-button">home</a>
 			</p>

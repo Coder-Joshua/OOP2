@@ -25,7 +25,19 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 <body>
 	<body class="w3-content" style="max-width: 1200px">
 		<jsp:include page="sidebar.jsp" flush="true" />
-		<jsp:include page="header.jsp" flush="true" />
+		<%--check to see if user has logged in --%>
+	<%
+		String user = (String) session.getAttribute("currentSessionUser");
+		if (user != null) {
+	%>
+	<jsp:include page="header.jsp" flush="true" />
+	<%
+		} else if (user == null) {
+	%>
+	<jsp:include page="startHeader.jsp" flush="true" />
+	<%
+		}
+	%>
 		
 		<div class="w3-main" style="margin-left: 250px">
 		<form class="w3-main" style="margin-left: 250px; margin-top: 75px; margin-bottom: 75px" method="get" action="Register">
@@ -35,45 +47,45 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 			<table>
 				<tr>
 					<td><b>First Name</b></td>
-					<td><input type="text" name="fname"></td>
+					<td><input type="text" name="fname" style="width:100%"></td>
 				</tr>
 				<tr>
 					<td><b>Last Name</b></td>
-					<td><input type="text" name="lname"></td>
+					<td><input type="text" name="lname" style="width:100%"></td>
 				</tr>
 				
 				<tr>
 					<td><b>Gender(M/F)</b></td>
-					<td><input type="text" name="g"></td>
+					<td><input type="text" name="g" style="width:100%"></td>
 				</tr>
 				
 				<tr>
 					<td><b>E-mail</b></td>
-					<td><input type="text" name="email"></td>
+					<td><input type="text" name="email" style="width:100%"></td>
 				</tr>
 				<tr>
 					<td><b>Address</b></td>
-					<td><input type="text" name="ad"></td>
+					<td><input type="text" name="ad" style="width:100%"></td>
 				</tr>
 				<tr>
 					<td><b>Security Question: <br/>What is your favorite color?</b></td>
-					<td><input type="password" name="ans"></td>
+					<td><input type="password" name="ans" style="width:100%"></td>
 				</tr>
 				
 				<tr>
 					<td><b>Username</b></td>
-					<td><input type="text" name="uname"></td>
+					<td><input type="text" name="uname" style="width:100%"></td>
 				</tr>
 				
 				<tr>
 					<td><b>Password</b></td>
-					<td><input type="password" name="pass"></td>
+					<td><input type="password" name="pass" style="width:100%"></td>
 				</tr>
 				
 				<tr>
 				
 					<td></td>
-					<td><input class="w3-blue w3-round" type="submit" value="register"></td>
+					<td><input class="w3-blue w3-round" type="submit" value="register" style="width:100%"></td>
 				</tr>
 			</table>
 		</form>

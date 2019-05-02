@@ -81,7 +81,7 @@ public class Cart extends HttpServlet {
 		else 
 		{
 			List<ItemBean> cart = (List<ItemBean>) session.getAttribute("cart");
-			int index = isExisting(request.getParameter("id"), cart);
+			int index = (int) isExisting(request.getParameter("id"), cart);
 			
 			if (index == -1) 
 			{

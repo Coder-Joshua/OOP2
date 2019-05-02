@@ -80,9 +80,9 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 			</div>
 
 			<div class="w3-col l3 s6">
-				<div class="w3-container w3-button">
-					<img src="Images/Alienware.jpg"
-						style="max-width: 100%; width: 100%; height: auto;">
+				<div class="w3-container " >
+					<a href=""><img src="Images/Alienware.jpg"
+						style="max-width: 100%; width: 100%; height: auto;"><input type="button"  ></a>
 					<p>
 						Alienware M15<br> <b>$1249.99</b>
 					</p>
