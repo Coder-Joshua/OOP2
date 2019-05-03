@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="web.entitites.RepairBean"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="web.entitites.SubscribeBean"/>
+<fullyQualifiedTypeName name="web.info.Contact"/>
+<fullyQualifiedTypeName name="web.entitites.ContactBean"/>
+<fullyQualifiedTypeName name="web.DAO.RegisterDao"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="web.DAO.ProductDao"/>
+<fullyQualifiedTypeName name="web.entitites.ItemBean"/>
+<fullyQualifiedTypeName name="web.entitites.ProductBean"/>
 </qualifiedTypeNameHistroy>
