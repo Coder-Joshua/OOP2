@@ -71,17 +71,7 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 						
 					</p>
 
-
-
-
-					<c:set var="productId" value="${acc.productID}" />
-
-					<c:url var="url" value="/setDetails">
-						<c:param name="productId" value="${productId}" />
-					</c:url>
-
-					<a href="${url}">Add to cart</a>
-					<c:out value="${acc.productDetails}" />
+					<a href="/ElectroWebShop/SetDetails?product=<c:out value="${phone.productID}"/>" class="w3-round w3-red">AddtoCart</a>
 				</div>
 			</c:forEach>
 		</div>

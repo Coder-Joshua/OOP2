@@ -62,6 +62,8 @@ public class ProductBean
 	}
 	public void setBase64image(String base64image) {
 		this.base64image = base64image;
-	}	
+	}
+
+	
 	
 }

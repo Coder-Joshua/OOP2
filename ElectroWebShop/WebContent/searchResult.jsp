@@ -47,6 +47,17 @@
 
 		<!-- Product Grid -->
 		<div class="w3-row" style="margin-bottom: 50px">
+		<% 
+		String result = (String) request.getParameter("result");
+		if(result != null){ %>
+		
+		<p class="w3-text-red w3-large w3-center">Search result not found</p>
+			
+		<%	
+		}
+		
+		%>
+		
 			<c:forEach items="${search}" var="s">
 				<div class="w3-container w3-button" style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
 				   	<img src="data:image/jpg;base64,${s.base64image}" height="100"/>
@@ -57,7 +68,7 @@
 					<br/>
 					<c:out value="${s.productDetails}" />
 					<br/>
-					
+					<a href="/ElectroWebShop/SetDetails?product=<c:out value="${s.productID}"/>" class="w3-round w3-red">AddtoCart</a>
 				</div>
 				
 				</c:forEach>				

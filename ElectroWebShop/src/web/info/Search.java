@@ -34,6 +34,8 @@ public class Search extends HttpServlet {
 
 		catch (Throwable theException) {
 			System.out.println(theException);
+			System.out.println("search result not found");
+			response.sendRedirect("searchResult.jsp?result=notfound");
 		}
 	}
 

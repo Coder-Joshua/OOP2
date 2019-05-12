@@ -82,7 +82,7 @@ input[type=text]:focus {
 				onclick="w3_open()"> <i class="fa fa-bars"></i>
 			</a> <a href="login.jsp"
 				class="w3-bar-item w3-button w3-padding-24 w3-right"
-				onclick="login()"> <i class="material-icons">person</i>
+				> <i class="material-icons">person</i>
 			</a> <a href="Start.jsp"
 				class="w3-bar-item w3-button w3-padding-24 w3-right"> <i
 				class="material-icons">home</i>

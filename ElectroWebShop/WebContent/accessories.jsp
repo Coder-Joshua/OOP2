@@ -55,25 +55,14 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 				<div class="w3-container w3-button"
 					style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
 					<img src="data:image/jpg;base64,${acc.base64image}" height="100" />
-					<br />
-					<b><c:out value="${acc.productName}" /></b>
-					<br /> $
+					<br /> <b><c:out value="${acc.productName}" /></b> <br /> $
 					<c:out value="${acc.productPrice}" />
 					<br />
 					<p>
 						<c:out value="${acc.productDetails}" />
 					</p>
 					
-
-					<c:set var="productId" value="${acc.productID}" />
-
-					<c:url var="url" value="/setDetails">
-						<c:param name="productId" value="${productId}" />
-					</c:url>
-
-					<a href="${url}">Add to cart</a>
-					
-
+					<a href="/ElectroWebShop/SetDetails?product=<c:out value="${acc.productID}"/>" class="w3-round w3-red">AddtoCart</a>
 				</div>
 
 			</c:forEach>

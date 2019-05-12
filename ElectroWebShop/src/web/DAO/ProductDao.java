@@ -3,6 +3,7 @@ package web.DAO;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.ProcessBuilder.Redirect;
 import java.sql.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class ProductDao {
 	
 	public static List<ProductBean> find(String name) {
 		List<ProductBean> List = new ArrayList<>();
-		String Query = "select productID,productName, productPrice, productDetails, productImage from product where productName like '%"+ name + "%'";
+		String Query = "select productID,productName, productPrice, productDetails, productImage from product where productName or productDetails like '%"+ name + "%'";
 		Statement stmt = null;
 		InputStream inputStream = null;
 		ByteArrayOutputStream outputStream = null;
@@ -107,6 +108,7 @@ public class ProductDao {
 
 		catch (SQLException | IOException ex) {
 			ex.printStackTrace();
+			System.out.println("Search results not found");
 		}
 
 		return List;

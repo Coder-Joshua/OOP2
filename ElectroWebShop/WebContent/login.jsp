@@ -27,10 +27,22 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 		<jsp:include page="sidebar.jsp" flush="true" />
 		<jsp:include page="startHeader.jsp" flush="true" />
 				
+		
 		<div class="w3-main" style="margin-left: 250px">
 		<form class="w3-main" style="margin-left: 250px; margin-top: 75px; margin-bottom: 75px" method="get" action="Login">
 			
 			<h1 style="color:black">Login</h1><br/>
+			<%
+		String register= (String) request.getParameter("register");
+		if(register != null){ %> 
+			
+			<p class="w3-text-blue">Registration succesfull, please Login</p>
+		
+		<% 
+		}
+		
+		%>		
+			
 			
 			<table>
 				<tr>

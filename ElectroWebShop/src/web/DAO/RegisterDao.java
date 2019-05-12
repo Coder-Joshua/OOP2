@@ -6,7 +6,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import web.entitites.ContactBean;
+import web.entitites.CreditCardBean;
 import web.entitites.RegisterBean;
 import web.entitites.RepairBean;
 import web.entitites.SubscribeBean;
@@ -72,6 +75,7 @@ public class RegisterDao {
 
 	public static ContactBean add(ContactBean contact) {
 		Statement stmt = null;
+		
 
 		String contactQuery = "insert into contact (Name,Email,Subject,Message) values('" + contact.getName() + "','"
 				+ contact.getEmail() + "','" + contact.getSubject() + "','" + contact.getMessage() + "')";
@@ -87,6 +91,23 @@ public class RegisterDao {
 		return contact;
 	}
 
+	public static CreditCardBean add(CreditCardBean creditcard) {
+		Statement stmt = null;
+		String CreditcardQuery = "insert into creditcards(cardNumber,cardCVC,cardExpM,cardExpY,cardUserName) values('"
+				+ creditcard.getCardNumber() + "','" + creditcard.getCardcvc() + "','" + creditcard.getExp_month() + "','"+creditcard.getExp_year()+"','"+creditcard.getUser()+"')";
+		try {
+			currentCon = DbConnection.getConnection();
+			stmt = currentCon.createStatement();
+			stmt.executeUpdate(CreditcardQuery);
+			currentCon.close();
+		} catch (Exception ex) {
+			System.out.println("Adding creditcard to database failed!");
+		}
+		System.out.println("CreditCard added succesfully to Database!");
+		return creditcard;
+
+	}
+
 	public static List<RegisterBean> view(String userID) {
 
 		List<RegisterBean> customer = new ArrayList<>();
@@ -96,7 +117,6 @@ public class RegisterDao {
 			currentCon = DbConnection.getConnection();
 			stmt = currentCon.createStatement();
 			ResultSet result = stmt.executeQuery(viewQuery);
-
 			while (result.next()) {
 				RegisterBean acc = new RegisterBean();
 				acc.setFirstName(result.getString("firstName"));

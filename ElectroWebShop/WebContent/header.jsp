@@ -81,9 +81,9 @@ input[type=text]:focus {
 			<a href="javascript:void(0)"
 				class="w3-bar-item w3-button w3-padding-24 w3-right"
 				onclick="w3_open()"> <i class="fa fa-bars"></i>
-			</a> <a href="profile.jsp"
+			</a> <a href="/ElectroWebShop/Profile"
 				class="w3-bar-item w3-button w3-padding-24 w3-right"
-				onclick="profile()"> <i class="material-icons">person</i>
+				> <i class="material-icons">person</i>
 			</a> <a href="home.jsp"
 				class="w3-bar-item w3-button w3-padding-24 w3-right"> <i
 				class="material-icons">home</i>
@@ -118,7 +118,7 @@ input[type=text]:focus {
 				</p>
 				<div class="dropdown-content" style="margin-top: 60px">
 					<a class="w3-tooltip w3-text-small"
-						href="/ElectroWebShop/addtocart">My Orders</a> <a
+						href="viewcart.jsp">My Orders</a> <a
 						href="checkout.jsp">Checkout</a>
 				</div>
 			</div>

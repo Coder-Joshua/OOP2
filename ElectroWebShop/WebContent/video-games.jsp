@@ -62,26 +62,11 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
 					<br />
 					<c:out value="${vg.productDetails}" />
 					<br />
-					<a href="${url}">Add to cart</a>
-					<c:out value="${acc.productDetails}" />
+					<a href="/ElectroWebShop/SetDetails?product=<c:out value="${vg.productID}"/>" class="w3-round w3-red">AddtoCart</a>
 				</div>
 			</c:forEach>
 		</div>
 
-		<div class="w3-row" style="margin-bottom: 50px">
-			<c:forEach items="${allImages}" var="image">
-				<div class="w3-container w3-button"
-					style="width: 250px; height: 250px; margin-left: 2px; margin-right: 2px">
-					<c:out value="${image.productName}" />
-					<br />
-					<c:out value="${image.image}" />
-					<br />
-					<c:out value="${image.imageFileName}" />
-					<br />
-					
-				</div>
-			</c:forEach>
-		</div>
 	</div>
 
 	<jsp:include page="footer.jsp" flush="true" />
