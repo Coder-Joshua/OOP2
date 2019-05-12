@@ -128,6 +128,16 @@ tr.payment {
 		</header>
 		<div style="margin-top: 50px; margin-bottom: 150px">
 			<%
+				String action = (String) request.getParameter("action");
+				if (action != null) {
+			%>
+				<p class="w3-text-red w3-center">Card info invalid, please try again</p>
+
+			<%
+				}
+			%>
+
+			<%
 				try {
 					Connection cn = DbConnection.getConnection();
 					String query = "select * from customer where userID='" + session.getAttribute("currentSessionUser")
@@ -182,7 +192,7 @@ tr.payment {
 						type="hidden" name="total" value="<%=total%>" /> <input
 						type="hidden" name="items" value="<%=pd.size()%>" />
 					</label> <label><span>CVC</span><input type="text" size="4"
-						name="cvc" style="height: 23px; width: 50px;"/></label>
+						name="cvc" style="height: 23px; width: 50px;" /></label>
 				</div>
 
 				<div class="form-row" style="margin: 10px;">
@@ -205,7 +215,8 @@ tr.payment {
 					out.println("</tr>");
 					out.println("</table>");
 				} else {
-					out.println("<div class='w3-center w3-text-red w3-xlarge'><span class='empty'>Shopping cart is currenly empty</span></div>");
+					out.println(
+							"<div class='w3-center w3-text-red w3-xlarge'><span class='empty'>Shopping cart is currenly empty</span></div>");
 				}
 			%>
 		</div>

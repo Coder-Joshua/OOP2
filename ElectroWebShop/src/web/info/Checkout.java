@@ -44,7 +44,7 @@ public class Checkout extends HttpServlet {
 				response.sendRedirect("checkoutValid.jsp");
 				
 			} else {
-				response.sendRedirect("cardError.jsp"); // error page
+				response.sendRedirect("checkout.jsp?action=error"); // error page
 				System.out.println("Incorrect card info. Please try again");
 			}
 		} catch (Throwable theException) {
